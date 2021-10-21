@@ -73,8 +73,8 @@ class Funcionario extends BaseController
 
         foreach ($funcionarios as $chave => $linha)
         {
-            $funcionarios[$chave]['editar'] = '<a href="editar/' . $linha['TB_FUNCIONARIO_ID'] . '"> ALTERAR </a>';
-            $funcionarios[$chave]['excluir'] = '<a href="excluir/' . $linha['TB_FUNCIONARIO_ID'] . '"> EXCLUIR </a>';       
+            $funcionarios[$chave]['editar'] = '<a class="btn btn-success btn-sm mt-4" href="editar/' . $linha['TB_FUNCIONARIO_ID'] . '"> ALTERAR </a>';
+            $funcionarios[$chave]['excluir'] = '<a class="btn btn-danger btn-sm mt-4" href="excluir/' . $linha['TB_FUNCIONARIO_ID'] . '"> EXCLUIR </a>';       
         }   
 
         $data['tabela'] = $funcionarios;

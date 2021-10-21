@@ -76,8 +76,8 @@ class Locacao extends BaseController
 
         foreach ($locacoes as $chave => $linha)
         {
-            $locacoes[$chave]['editar'] = '<a href="editar/' . $linha['TB_LOCACAO_ID'] . '"> ALTERAR </a>';
-            $locacoes[$chave]['excluir'] = '<a href="excluir/' . $linha['TB_LOCACAO_ID'] . '"> EXCLUIR </a>';       
+            $locacoes[$chave]['editar'] = '<a class="btn btn-success btn-sm mt-4" href="editar/' . $linha['TB_LOCACAO_ID'] . '"> ALTERAR </a>';
+            $locacoes[$chave]['excluir'] = '<a class="btn btn-danger btn-sm mt-4" href="excluir/' . $linha['TB_LOCACAO_ID'] . '"> EXCLUIR </a>';       
         }   
 
         $data['tabela'] = $locacoes;

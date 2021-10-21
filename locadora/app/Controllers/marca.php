@@ -66,8 +66,8 @@ class Marca extends BaseController
 
         foreach ($marcas as $chave => $linha)
         {
-            $marcas[$chave]['editar'] = '<a href="editar/' . $linha['TB_MARCA_ID'] . '"> ALTERAR </a>';
-            $marcas[$chave]['excluir'] = '<a href="excluir/' . $linha['TB_MARCA_ID'] . '"> EXCLUIR </a>';       
+            $marcas[$chave]['editar'] = '<a class="btn btn-success btn-sm mt-4" href="editar/' . $linha['TB_MARCA_ID'] . '"> ALTERAR </a>';
+            $marcas[$chave]['excluir'] = '<a class="btn btn-danger btn-sm mt-4" href="excluir/' . $linha['TB_MARCA_ID'] . '"> EXCLUIR </a>';       
         }   
 
         $data['tabela'] = $marcas;

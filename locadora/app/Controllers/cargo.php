@@ -63,8 +63,8 @@ class Cargo extends BaseController
 
         foreach ($cargos as $chave => $linha)
         {
-            $cargos[$chave]['editar'] = '<a href="editar/' . $linha['TB_CARGO_ID'] . '"> ALTERAR </a>';
-            $cargos[$chave]['excluir'] = '<a href="excluir/' . $linha['TB_CARGO_ID'] . '"> EXCLUIR </a>';       
+            $cargos[$chave]['editar'] = '<a class="btn btn-success btn-sm mt-4" href="editar/' . $linha['TB_CARGO_ID'] . '"> ALTERAR </a>';
+            $cargos[$chave]['excluir'] = '<a class="btn btn-danger btn-sm mt-4" href="excluir/' . $linha['TB_CARGO_ID'] . '"> EXCLUIR </a>';       
         }   
 
         $data['tabela'] = $cargos;

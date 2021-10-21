@@ -88,8 +88,8 @@ class Cliente extends BaseController
 
         foreach ($clientes as $chave => $linha)
         {
-            $clientes[$chave]['editar'] = '<a href="editar/' . $linha['TB_CLIENTE_ID'] . '"> ALTERAR </a>';
-            $clientes[$chave]['excluir'] = '<a href="excluir/' . $linha['TB_CLIENTE_ID'] . '"> EXCLUIR </a>';       
+            $clientes[$chave]['editar'] = '<a class="btn btn-success btn-sm mt-4" href="editar/' . $linha['TB_CLIENTE_ID'] . '"> ALTERAR </a>';
+            $clientes[$chave]['excluir'] = '<a class="btn btn-danger btn-sm mt-4" href="excluir/' . $linha['TB_CLIENTE_ID'] . '"> EXCLUIR </a>';       
         }   
 
         $data['tabela'] = $clientes;

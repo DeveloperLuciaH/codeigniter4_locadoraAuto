@@ -71,8 +71,8 @@ class Modelo extends BaseController
 
         foreach ($modelos as $chave => $linha)
         {
-            $modelos[$chave]['editar'] = '<a href="editar/' . $linha['TB_MODELO_ID'] . '"> ALTERAR </a>';
-            $modelos[$chave]['excluir'] = '<a href="excluir/' . $linha['TB_MODELO_ID'] . '"> EXCLUIR </a>';       
+            $modelos[$chave]['editar'] = '<a class="btn btn-success btn-sm mt-4" href="editar/' . $linha['TB_MODELO_ID'] . '"> ALTERAR </a>';
+            $modelos[$chave]['excluir'] = '<a class="btn btn-danger btn-sm mt-4" href="excluir/' . $linha['TB_MODELO_ID'] . '"> EXCLUIR </a>';       
         }   
 
         $data['tabela'] = $modelos;

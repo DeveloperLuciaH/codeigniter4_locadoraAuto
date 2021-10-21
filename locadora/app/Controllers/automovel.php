@@ -10,8 +10,8 @@ class Automovel extends BaseController
         $model = new \App\Models\AutomovelModel;
         $automoveis = array();
         $automoveis['data'] = $model->findAll();
-
-        echo view('automovelView', $automoveis);
+             
+        echo view('automovelView', $automoveis);    
     }
 
     public function inserir()
@@ -78,11 +78,11 @@ class Automovel extends BaseController
 
         foreach ($automoveis as $chave => $linha)
         {
-            $automoveis[$chave]['editar'] = '<a href="editar/' . $linha['TB_AUTOMOVEL_ID'] . '"> ALTERAR </a>';
-            $automoveis[$chave]['excluir'] = '<a href="excluir/' . $linha['TB_AUTOMOVEL_ID'] . '"> EXCLUIR </a>';       
+            $automoveis[$chave]['editar'] = '<a class="btn btn-success btn-sm mt-4" href="editar/' . $linha['TB_AUTOMOVEL_ID'] . '"> ALTERAR </a>';
+            $automoveis[$chave]['excluir'] = '<a class="btn btn-danger btn-sm mt-4" href="excluir/' . $linha['TB_AUTOMOVEL_ID'] . '"> EXCLUIR </a>';       
         }   
 
-        $data['tabela'] = $automoveis;
+        $data['data'] = $automoveis;
 		echo view('automovelView', $data);     
     }
 
